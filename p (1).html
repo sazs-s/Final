@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TN Hotel Booking</title>
+    <style>
+        body { font-family: sans-serif; background-color: #eef2f3; margin: 0; padding: 20px; }
+        header { background: #0056b3; color: white; text-align: center; padding: 10px; border-radius: 10px; }
+        
+        /* Hotel List */
+        .hotel-list { margin-top: 20px; }
+        .hotel-item { 
+            background: white; padding: 15px; margin-bottom: 10px; 
+            border-radius: 8px; border-left: 5px solid #0056b3;
+            display: flex; align-items: center;
+        }
+        .hotel-item img { width: 80px; height: 80px; border-radius: 5px; margin-right: 15px; object-fit: cover; background-color: #ccc; }
+        
+        /* Form Styling */
+        .booking-box { background: white; padding: 20px; margin-top: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        label { font-weight: bold; display: block; margin-top: 10px; }
+        input, select { width: 100%; padding: 10px; margin: 5px 0 15px 0; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+        
+        button { background: #28a745; color: white; border: none; padding: 15px; width: 100%; cursor: pointer; font-size: 18px; border-radius: 5px; font-weight: bold; }
+        footer { text-align: center; margin-top: 40px; color: #666; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Tamil Nadu Hotel Finder</h1>
+    <p>Find the best stay for your trip!</p>
+</header>
+
+<div class="hotel-list">
+    <div class="hotel-item">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=200">
+        <div><b>1. Chennai Luxury Inn</b><br>Marina Beach - ₹3000</div>
+    </div>
+
+    <div class="hotel-item">
+        <img src="https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?w=200">
+        <div><b>2. Ooty Mist Resort</b><br>Hill Station - ₹2500</div>
+    </div>
+
+    <div class="hotel-item">
+        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=200">
+        <div><b>3. Kodai Lake View</b><br>Nature Stay - ₹2000</div>
+    </div>
+
+    <div class="hotel-item">
+        <img src="https://images.unsplash.com/photo-1621259182978-fbf93132d53d?w=200">
+        <div><b>4. Madurai Temple Stay</b><br>Heritage - ₹1500</div>
+    </div>
+
+    <div class="hotel-item">
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=200">
+        <div><b>5. Kanyakumari Sunrise</b><br>Beachfront - ₹2200</div>
+    </div>
+
+    <div class="hotel-item">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=200">
+        <div><b>6. Rameshwaram Guest House</b><br>Divine Stay - ₹1200</div>
+    </div>
+
+    <div class="hotel-item">
+        <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?w=200">
+        <div><b>7. The Kovai Grand</b><br>City Center - ₹3800</div>
+    </div>
+
+    <div class="hotel-item">
+        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=200">
+        <div><b>8. Yercaud Green Hills</b><br>Forest View - ₹1800</div>
+    </div>
+
+    <div class="hotel-item">
+        <img src="https://images.unsplash.com/photo-1583037189850-1921ae7c6c22?w=200">
+        <div><b>9. Thanjavur Royal Stay</b><br>Culture Hub - ₹2400</div>
+    </div>
+
+    <div class="hotel-item">
+        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=200">
+        <div><b>10. Mahabs Beach Resort</b><br>Sea View - ₹3500</div>
+    </div>
+</div>
+
+<div class="booking-box">
+    <h3>Enter Required Stay Details</h3>
+    <form onsubmit="alert('Your booking for Hotel #' + this.hotelNum.value + ' is confirmed!'); return false;">
+        
+        <label>Pick Hotel (Type Number 1-10):</label>
+        <input type="number" name="hotelNum" min="1" max="10" placeholder="e.g. 4" required>
+
+        <label>Check-in Date:</label>
+        <input type="date" required>
+
+        <label>Check-out Date:</label>
+        <input type="date" required>
+
+        <label>Room Type:</label>
+        <select>
+            <option>Single Bed</option>
+            <option>Double Bed</option>
+            <option>Deluxe Suite</option>
+            <option>Luxury Villa</option>
+        </select>
+
+        <label>Total Guests:</label>
+        <input type="number" min="1" value="1" required>
+
+        <button type="submit">Confirm My Booking</button>
+    </form>
+</div>
+
+<footer>
+    <p>Tamil Nadu Tourism | College Project 2026</p>
+</footer>
+
+</body>
+</html>
